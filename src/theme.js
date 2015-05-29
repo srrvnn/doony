@@ -341,4 +341,10 @@ jQuery(function($) {
     $("#l10n-footer").after("<span class='doony-theme'>Browsing Jenkins with " +
         "the <a target='_blank' href='https://github.com/kevinburke/doony'>" +
         "Doony theme</a></span>");
+
+    // convert console out from ansi to html
+
+    var elConsole = $('.console-output');
+    elConsole.html(ansi_up.ansi_to_html(elConsole.text()));
+
 });
